@@ -1,0 +1,336 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7973858330016049475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2158264854057157766}
+  - component: {fileID: 1001604677621753259}
+  m_Layer: 0
+  m_Name: Gestor de dialogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2158264854057157766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973858330016049475}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.673496, y: 68.1912, z: -14.482669}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1001604677621753259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973858330016049475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4d58fba7c4afd4b92a121d5224bed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  opcinesSimples: {fileID: 0}
+  opcionesAlberto: {fileID: 0}
+  texto: {fileID: 0}
+  opcion1: {fileID: 0}
+  opcion2: {fileID: 0}
+  textoAda:
+  - dialogos:
+    - "Ada: Al ser la sala que tiene el cuarto para cambiarse suelen haber algunos
+      guardias que patrullan, mientras est\xE9s disfrazado y no hagas nada raro no
+      deber\xEDan detenerte."
+  - dialogos:
+    - "Ada: Esta sala tiene varias piezas de arte exc\xE9ntrico de esta civilizaci\xF3n,
+      aunque de momento ninguna de ellas nos facilita saber el nombre de esta."
+    - "Ada: No entiendo porque los otros miembros le siguen el juego a Alberto. \xBFTal
+      vez porque es uno de los miembros m\xE1s viejos de la logia?"
+  - dialogos:
+    - "Ada: Esta sala adem\xE1s de ser conocida por el nombre del \u201CEl cuarto
+      de Aerius\u201D, tambi\xE9n es conocida por el nombre de \u201CLa sala arcoiris\u201D."
+    - "Ada: Mi gu\xEDa termina ac\xE1, m\xE1s all\xE1 de esa puerta s\xF3lo puede
+      entrar el l\xEDder de la logia del Amanecer \u201CAurum\u201D. Le deseo suerte,
+      y que esta haya sido la decisi\xF3n correcta para el mundo. "
+  textoDex:
+  - dialogos:
+    - "DexR: \xBFYa hay problemas de comunicaci\xF3n desde el inicio? Te dije que
+      te dirigieras al cuarto en la parte superior."
+    - "DexR: Encuentra los cables que mantienen cerrada la puerta y puentea los,
+      tal vez los colores te gu\xEDen para saber cu\xE1l conectar con cual."
+    - 'DexR: Busquemos como ir a la siguiente sala, tal vez Ada te pueda refrescar
+      la memoria.'
+  - dialogos:
+    - "DexR: Esta civilizaci\xF3n seguro se extingui\xF3 por el mal sentido del arte
+      que ten\xEDan, solo de ver el cuadro uno ya se puede dar cuenta."
+    - "DexR: \xBFEh?\xBFOtra vez con problemas de comunicaci\xF3n? \u201CProsigamos
+      con la misi\xF3n, dir\xEDgete a las escaleras\u201D dije."
+    - "DexR: La basura de algunos es el tesoro de otros, busca la contrase\xF1a de
+      el \u201Cfetichista de las puertas\u201D entre toda la basura de arte de este
+      lugar."
+  - dialogos:
+    - 'DexR: Chch arc---- chch col---- chch roj- chch vio---- chch.'
+    - "DexR: Chch\u2026. chch\u2026."
+  dialogosEspeciales:
+  - dialogos:
+    - "G: Intruso en nuestra espl\xE9ndida base. Jam\xE1s saldr\xE1s vivo de aca.
+      \xA1Luz eterna para la logia del amanecer!"
+    - "O: En poco tiempo est\xE1s rodeado por los guardias de la logia del amanecer."
+    - "Guardia: Hoy ser\xE1 el d\xEDa en el que el gran l\xEDder activara el \u201Carma\u201D
+      secreta. \xA1Luz eterna para la logia del Amanecer!"
+  - dialogos:
+    - "\u201CNo hay nada m\xE1s majestuoso que el halo sagrado que genera la luz
+      del amanecer al reflejarse en el metal precioso AURUM, que la eternidad de
+      los d\xEDas sea perpetrada por este\u201D"
+    - "\u201CCuentan antiguos relatos que esta civilizaci\xF3n hab\xEDa encontrado
+      la forma de ganar todas sus guerra\u201D"
+    - "\u201CCon la ayuda de un artefacto que solo sus cientificos podran entender,
+      huyen de la posibilidad de cualquier derrota, y sacrificaban a sus hombres
+      todas las veces que sea necesario\u201D"
+    - "\u201CUn tal OR\xC1CULO, el \xFAnico que parec\xEDa no afectar los poderes
+      de este artefacto, cansado de ver tanta muerte y miseria se rebel\xF3 contra
+      sus iguales y llev\xF3 la civilizaci\xF3n a la ruina\u201D"
+    - "\u201CNo obstante el Rey logr\xF3 preservar el artefacto en un lugar seguro
+      tras la protecci\xF3n del guardi\xE1n ancestral Aerius. Se dice que solo aquel
+      que tenga la llave del Rey podr\xE1 reclamar las maravillas olvidadas de esta
+      civilizaci\xF3n y retomar los designios de los antiguos reyes\u201D"
+  historia:
+  - dialogos:
+    - 'O: En la Logia Del Amanecer 23:00'
+    - "Helio: Infiltraci\xF3n exitosa."
+    - "DexR: Confirmado, iniciando operaci\xF3n. Dir\xEDgete al cuarto en la parte
+      superior, all\xED encontrar\xE1s a la desertora de la logia \u201CAda\u201D,
+      te dare mas informacion conforme avances. "
+    - "Puedes hablar con Dex cuando quieras, te dar\xE1 informaci\xF3n de que debes
+      hacer."
+  - dialogos:
+    - "Al llegar a la puerta del cuarto indicado por Dex te encuentras que debes
+      forzar la puerta autom\xE1tica a abrirse."
+    - "DexR: Debes puentear los cables de la puerta para desbloquearla. Seg\xFAn
+      parece estos se encuentran cerca de la puerta."
+  - dialogos:
+    - 'O: Al entrar al cuarto, encuentras a una mujer con uniforme de la logia la
+      cual se acerca a hablarte.'
+    - 'Ada: Lo estuve esperando agente Helio. Aca tiene un traje para aparentar ser
+      miembro de la logia.'
+    - 'Helio: Supongo que usted es Ada.'
+  - dialogos:
+    - "Helio: \xBFQue te llev\xF3 a traicionar a la logia?"
+    - "Ada: Ya no creo que la logia del Amanecer siga los mismos ideales por los
+      que me un\xED a ella. "
+    - "Helio: \xBFLos mismos ideales? \xBFNo son desde sus inicios un nido de psic\xF3patas
+      extremistas?"
+    - "Ada: No se que les hace pensar eso a los miembros de la organizaci\xF3n Arca,
+      pero en la logia nuestro objetivo era la comprensi\xF3n y preservaci\xF3n de
+      todas las civilizaciones. Pero en los \xFAltimos a\xF1os se empe\xF1aron en
+      localizar y restaurar estas ruinas por una \u201Carma\u201D que utiliz\xF3
+      esta civilizaci\xF3n en el pasado para casi conquistar el mundo. "
+    - "Helio: Tipico comportamiento de lunaticos, nada bueno pod\xEDa venir de un
+      grupo que se llama \u201Clogia\u201D."
+    - "DexR: Lamento interrumpir su apasionado debate, pero deber\xEDamos proseguir
+      con la misi\xF3n."
+  - dialogos:
+    - "O: Te pones el uniforme de la logia encima de lo que ten\xEDas."
+    - "DexR: para cumplir la misi\xF3n debemos destruir el \u201Carma\u201D secreta
+      de la logia, se\xF1orita Ada ind\xEDquenos el camino."
+    - "Ada: Como yo no tengo acceso a todas las salas del lugar tendremos que abrir
+      las puertas a la fuerza de alg\xFAn modo. Esta es la sala de \u201Ccamerinos\u201D,
+      se pueden encontrar algunos guardias patrullando el pasillo. Al final de este
+      encontrar\xE1s una puerta que te lleva a la sala de \u201Carte\u201D. C\xF3mo
+      ser\xEDa sospechoso que nos desplaz\xE1ramos juntos, ve primero, yo voy una
+      vez entres en la siguiente sala. "
+  - dialogos:
+    - 'O: Al ingresar en la nueva sala se observa una gran variedad de decoraciones
+      inusuales, y a los pocos segundos entra Ada.'
+    - "Ada: Tengo entendido que en alg\xFAn lugar de esta sala hay un mecanismo que
+      revela unas escaleras. Lamentablemente no se cual es, as\xED que habr\xE1 que
+      buscarlo."
+    - 'Dex: Toca buscar en esta pila de basuras, aunque no entiendo el horrible gusto
+      del arte de estos locos.'
+    - "Helio: \u2026.."
+  - dialogos:
+    - "Helio: (Tengo la sensaci\xF3n de que vi este cuadro cuando era chico, recuerdo
+      que sol\xEDa gustarme, mejor no le digo eso a Dex)"
+    - "Helio: Este cuadro parece estar desordenado, tal vez sea el interruptor para
+      activar las \u201Cescaleras\u201D que menciono Ada."
+  - dialogos:
+    - "O: Tras resolver el rompecabezas escuchas el ruido del piso movi\xE9ndose."
+    - 'Ada: Desbloqueaste el pasadizo secreto.'
+    - "DexR: Prosigamos con la misi\xF3n, dir\xEDgete a las escaleras."
+    - "Helio: (Al final el cuadro es id\xE9ntico a uno que hab\xEDa en mi casa cuando
+      era chico, entonces lo que me dijeron en la sede del Arca \xBFEra cierto?)"
+  - dialogos:
+    - "O: Tras bajar por las escaleras se ve a un guardia bloqueando la \xFAnica
+      puerta por la que avanzar."
+    - "Ada: Ese guardia se llama Alberto, tiene la costumbre de quedarse vigilando
+      puertas y no dejar pasar a nadie que no le diga la contrase\xF1a, hay que tener
+      cuidado, en caso de decir mal la contrase\xF1a activa la alerta y nos rodear\xE1n
+      los otros mismos de la logia."
+    - "Helio: \xBFQue no hay nadie con un poco de sentido com\xFAn en tu grupo de
+      lun\xE1ticos? Un jefe que sue\xF1a con el dominio mundial, miembros amantes
+      de los lemas y la palabra camarada, un fetichista de las puertas. Les falta
+      un robot antiguo y est\xE1n completos."
+    - "Ada: \u2026\u2026"
+    - 'DexR: Jajaja ese silencio no puede ser nada bueno.'
+    - "Ada: Volviendo al tema. Suele escribir en papeles y entregar a la mayor\xEDa,
+      por desgracia hoy no me la entrego a mi. Tambi\xE9n encontramos la contrase\xF1a
+      en alg\xFAn lugar del desorden de esta sala, algunos miembros suelen tirar
+      el papel despu\xE9s de pasar por una puerta resguardada por Alberto."
+    - 'Helio: Encima mugrientos los locos.'
+    - 'DexR: Bueno ya la escuchaste. Te toca buscar un tesoro para nosotros en la
+      basura de otros.'
+  - dialogos:
+    - "Guardia (Alberto): Veamos si eres un verdadero camarada. Y si tenes lo necesario
+      para pasar por mi umbral \xBFCu\xE1l es la contrase\xF1a del d\xEDa?"
+  - dialogos:
+    - "Guardia (Alberto): \xA1Impostor detectado!"
+    - "O: El guardia suena la alarma y en pocos segundos est\xE1n rodeados\u2026.."
+  - dialogos:
+    - "Guardia (Alberto): \xA1As\xED es camarada!\xA1Luz eterna para la logia del
+      amanecer!\xA1Brindada por nuestro propio sol el gran se\xF1or Aurum!"
+    - "Helio: \xA1Luz eterna para la logia del Amanecer! (Este lugar no es sano para
+      la mente) "
+  - dialogos:
+    - "O: Tras dejar atr\xE1s el umbral de Alberto y caminar por un pasillo con las
+      indicaciones de Ada. El grupo lleg\xF3 a una sala larga, donde al final se
+      encontraba un nuevo portero."
+    - 'Helio: lo que faltaba el robot.'
+    - "Ada: Seg\xFAn las investigaciones es un guardi\xE1n llamado Aerius creado
+      por la civilizaci\xF3n de la ruina, resguarda la entrada a la sala donde se
+      encuentra el \u201Carma\u201D que est\xE1n buscando destruir."
+    - "DexR: Ada tiene raz\xF3n, chch m\xE1s all\xE1 de esa puerta detect\xF3 se\xF1ales
+      extra\xF1as, chch tal vez se est\xE1n preparando para activar el arma."
+    - "Helio: \xBFDex? \xBFEl \u201Carma\u201D est\xE1 causando interferencia?"
+    - "Ada: \xBFEst\xE1n diciendo que llegamos tarde?"
+    - "Helio: No lo s\xE9, tal vez solo estamos en un lugar profundo donde la se\xF1al
+      de la radio es debida. De cualquier forma tenemos que apurarnos para terminar
+      la misi\xF3n."
+    - "Ada: Aerius ataca a cualquiera que no pase por las baldosas correctas del
+      camino de colores que est\xE1 frente a \xE9l, pero no se cual es el camino
+      correcto, cuando me un\xED a la logia solo me ense\xF1aron la sala para presumir
+      de Aerius."
+    - "Aerius: Seres org\xE1nicos detectados, comenzando observaci\xF3n."
+    - "Helio: (Ser\xEDa bueno intentar descubrir alguno pista en la informaci\xF3n
+      de Ada o intentar comunicarse con Dex a ver si se le ocurre algo)"
+  - dialogos:
+    - "Aerius: Org\xE1nico reconocido como posible amenaza, armas cargadas y apuntando."
+    - "Helio: \xBFQuiere decir que ya no hay marcha atr\xE1s?"
+  - dialogos:
+    - "Aerius: Comportamiento del Org\xE1nico fuera del patr\xF3n permitido, iniciando
+      eliminaci\xF3n."
+  - dialogos:
+    - "Aerius: Org\xE1nico identificado, cambio de estado a personal autorizado,
+      entrando en modo de suspensi\xF3n."
+  - dialogos:
+    - "O: Al entrar en la sala, al fondo, se puede distinguir el panel de control
+      del \u201Carma\u201D de la logia del Amanecer. Pero un individuo en una especie
+      de traje mec\xE1nico se interpone en el camino."
+    - 'Aurum: Asique las ratas del Arca lograran llegar hasta mi presencia.'
+    - "Helio: Asique vos sos el lun\xE1tico mayo, el l\xEDder de la logia del Amanecer,
+      Aurum."
+    - "Aurum: Aunque llegaran hasta mi presencia, nada cambiara, todo se mantendr\xE1
+      igual y perpetuo, y los ideales de la logia del Amanecer perduraran por la
+      eternidad. Los intentos de tu organizaci\xF3n por cumplir su cometido jam\xE1s
+      se ver\xE1n cumplidos."
+  - dialogos:
+    - "Helio: T\xEDpicas palabras de cualquier jefe gen\xE9rico."
+    - 'Aurum: Demasiado confiado para ser un don nadie. Que comience la eterna matanza
+      de la rata.'
+  - dialogos:
+    - "O: Al desactivar el \xFAltimo pilar, la plataforma en la que se encuentra
+      Aurum se cae al abismo bajo sus pies."
+    - "Aurum: \xA1Aaaah!"
+    - "Helio: \xBFQu\xE9 dec\xEDas de que jam\xE1s iba a ver cumplido mi objetivo?
+      Dudo que me escuche en donde sea que haya ca\xEDdo."
+    - "DexR: Chch Helio ChCh Helio \xBFMe escuchas?"
+    - "Helio: Volviste tarde Dex, la logia del Amanecer ya no tiene un lun\xE1tico
+      mayor que los dirija y estoy en frente del panel de control del \u201Carma\u201D."
+    - "DexR: Perd\xF3n, cost\xF3 encontrar una forma de que la se\xF1al te llegara
+      de vuelta. Es momento de terminar con la misi\xF3n, destruye el panel de control
+      del \u201Carma\u201D y te esperaremos en el punto de extracci\xF3n. "
+    - "O: Tras colocar explosivos por la sala del \u201CArma\u201D, emprendes tu
+      viaje de regreso hacia el punto de extracci\xF3n."
+    - "O: Tras estar a salvo en el transporte que te lleva a la sede del Arca. Puedes
+      ver desde la ventana varios pilares de luz generados por explosiones de alg\xFAn
+      tipo de arma de destrucci\xF3n masiva."
+    - "O: Por la radio de la radio escuchas que el proyecto \u201CNueva Arca\u201D
+      hab\xEDa iniciado. "
+    - 'O: Fin.'
+  - dialogos:
+    - "Helio: No est\xE9s tan seguro, despu\xE9s de todo el Arca me envi\xF3 a mi,
+      el descendiente del Or\xE1culo, \xBFSupongo que ya sabes que significa?."
+    - "Aurum: Que no sos una rata, sino una cucaracha. A tu linaje no le alcanz\xF3
+      con llevar el reino de mis ancestros a la ruina, sino que tambi\xE9n quieren
+      llevar mis ideales y al mundo a la ruina."
+    - "Helio: En eso est\xE1s equivocado, ayude al el Arca porque cuando me contactaron,
+      me dijeron que la logia del Amanecer quer\xEDa destruir el mundo como lo conocemos.
+      Pero despu\xE9s de mi camino hasta llegar hasta ac\xE1."
+    - "Helio: Me enter\xE9 de cu\xE1les eran las verdaderas intenciones de ambas
+      partes, y decid\xED que coincido con tu secta de lun\xE1ticos, el sistema Amanecer
+      es lo \xFAnico que preserva el mundo como lo conocemos."
+    - "Aurum: Jam\xE1s cre\xED que conocer\xEDa una cucaracha con algo de sentido
+      com\xFAn."
+    - "DexR: As\xED que al final vas a traicionarnos."
+    - "Helio: \xA1Dex! \xBFRecuperaste las comunicaci\xF3n?"
+    - "DexR: Jam\xE1s hubo interferencia en las comunicaciones, era una prueba, para
+      ver si hab\xEDa descubierto la verdad y si eras digno de ser parte del nuevo
+      mundo que traer\xEDa el proyecto \u201CNueva Arca\u201D. Adem\xE1s necesitaba
+      tiempo para hacer esto."
+    - 'O: Tras las palabras de Dex, el traje de Aurum se mueve contra su voluntad
+      y lo mata.'
+    - "RexR: Parece que lo \xFAnico que es superior a la tecnolog\xEDa del Arca es
+      el sistema Amanecer, si puedo hackear un simple traje mec\xE1nico desde tan
+      lejos."
+    - "RexR: Bueno Helio \xBFEmpezamos con tu ejecuci\xF3n por traidor?"
+    - "Helio: \xBFTraidor? ustedes me trajeron hasta ac\xE1 a base de enga\xF1os."
+    - 'DexR: Todo sea por un mundo puro y mejor.'
+  - dialogos:
+    - "O: Al desactivar el \xFAltimo pilar la plataforma, en la que se encuentra
+      el traje rob\xF3tico controlado por Dex, se cae al abismo bajo sus pies."
+    - "RexR: Cometes un error Helio. Este mundo corrompido por tantas civilizaciones
+      tan variadas, s\xF3lo podr\xE1 alcanzar la salvaci\xF3n por la gracia del Arca."
+    - "Helio: \xBFY quien determina que el que los eligi\xF3 a ustedes es una persona
+      tan digna de dirigir el mundo?"
+    - 'O: Tras estas palabras arrojas la radio, por la que se comunicaba Dex, al
+      abismo.'
+    - "Helio: Al final estoy repitiendo palabras de una loca voyerista. (Suspira)
+      el mundo ya no tiene salvaci\xF3n."
+    - 'O: Te retiras de la sala del sistema del Amanecer sin desactivalo, y decides
+      condenar al mundo a la eternidad del anochecer, para preservar la diversidad
+      de civilizaciones de la actualidad.'
+    - 'O: Fin.'
+  posmortem:
+  - dialogos:
+    - "DexR: Confirmado, iniciando operaci\xF3n. Dir\xEDgete al cuarto en la parte
+      superior, all\xED encontrar\xE1s a la desertora de la logia \u201CAda\u201D,
+      te dare mas informacion conforme avances. "
+    - "Helio: (Eh \xBFNo se supon\xEDa que estaba en otro lugar haciendo otra cosa?\xBFSer\xE1
+      este el poder del \u201CArma\u201D de la logia del amanecer y el que recuerde
+      todo el motivo por el cual el Arca me contrato para la misi\xF3n?)"
+  - dialogos:
+    - "DexR: Confirmado, iniciando operaci\xF3n. Dir\xEDgete al cuarto en la parte
+      superior, all\xED encontrar\xE1s a la desertora de la logia \u201CAda\u201D,
+      te dare mas informacion conforme avances. "
+    - "Helio: (No pude completar mi cometido, tal vez deba resguardarse en los pilares
+      en alg\xFAn momento espec\xEDfico antes de que se me acabe el tiempo)"
+  opciones:
+  - dialogos:
+    - "\xBFQue te llevo a traicionar a la logia?"
+    - Cambiarse.
+  - dialogos:
+    - Tipicas palabras de cualquier jefe final generico
+    - "No est\xE9s tan seguro"

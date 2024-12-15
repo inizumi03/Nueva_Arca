@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1184119493314086716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1340280598918277075}
+  - component: {fileID: 7161854676032117846}
+  m_Layer: 0
+  m_Name: Dialogos Cientifica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1340280598918277075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184119493314086716}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.499795, y: 4.038455, z: 14.618215}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7161854676032117846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184119493314086716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3da516f65dccc14594e4e8e63cee8a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  opcines: {fileID: 0}
+  texto: {fileID: 0}
+  historia:
+  - dialogos:
+    - "O: En el recinto se puede sentir el olor \xE1cido de un laboratorio, y al
+      observar m\xE1s la sala, se puede apreciar a una mujer tras una mesada con
+      equipos cient\xEDficos, quien mira a Helio como si lo esperara."
+    - 'Mujer: El afamado sucesor ha llegado al fin.'
+    - "Helio: \xBFNo la entiendo doctora?"
+    - "Lovelace: D\xEDgame Lovelace, el t\xEDtulo de doctor es solo se le otorga
+      a las personas del m\xE1s alto grado acad\xE9mico universitario \xBFPero quien
+      determina la val\xEDa de quienes otorgan ese t\xEDtulo?"
+    - "Lovelace: Y sucesivamente \xBFQuien valida a los que validan?. Al final todo
+      est\xE1 sujeto del ojo observador, despu\xE9s de todo hay ignorantes m\xE1s
+      calificados que los doctores y doctores menos calificados que los ignorantes."
+    - "Lovelace: \xBFCual es tu caso sucesor?"
+    - "Helio: (Perfecto ahora una loca fil\xF3sofa) \xBFNo la entiendo Lovelace?,
+      solo soy un simple miembro de la logia del Amanecer."
+    - "Lovelace: Un simple miembro de la logia del amanecer. Hasta ahora la \xFAnica
+      persona que pudo entrar a este cuarto fue Aurum, aunque m\xE1s bien lo deje
+      entrar debido a la llave que tiene en su poder."
+    - "Lovelace: Lo que seg\xFAn mis especulaciones te convierte en el sucesor, de
+      lo contrario no habr\xEDa resuelto el acertijo del cuadro en la sala de \u201Carte\u201D,
+      se\xF1or Helio enviado de la organizaci\xF3n Arca."
+    - "Helio: \xA1\xBFQui\xE9n sos?!\xBFC\xF3mo sabes todo eso?"
+    - "Lovelace: La verdad favorece al ojo observador. Soy solo una observadora de
+      todos los sucesos, la cient\xEDfica Lovelace. \xBFC\xF3mo es todo eso?"
+    - "Lovelace: La respuesta es simple, hace muchos a\xF1os otro cient\xEDfico invent\xF3
+      la \u201Cc\xE1mara\u201D, lo que con el paso de los a\xF1os ir\xEDa evolucionando
+      de diferentes formas hasta llegar a mis c\xE1maras de seguridad personal instaladas
+      en todos los lugares de la ruina, para poder observar a la perfecci\xF3n."
+    - "Lovelace: Tambi\xE9n cuentan con micr\xF3fono incluido, por eso escuche Las
+      conversaciones que tuviste con Ada y Dex. Pero pod\xE9is estar tranquilos,
+      no tengo que informarle a nadie de sus cometidos."
+    - "Helio: Nadie estar\xEDa tranquilo estando solo con una voyeurista en un laboratorio."
+    - 'Lovelace: Ignorando que estas usando mal la palabra voyeurismo y que soy una
+      observadora y no un bicho raro como crees.'
+    - 'Lovelace: Para demostrarte que soy una persona decente y sincera, y en honor
+      a tu linaje, voy a responder a las preguntas que tengas, siempre y cuando cuentes
+      con el tiempo para hacerlas.'
+  - dialogos:
+    - "Helio: \xBFA que te referis con \u201Csucesor\u201D?"
+    - "Lovelace: Que triste, que tus ancestros te hayan dejado en la ignorancia,
+      aunque algo deber\xEDas de suponer, sino porque otro motivo la agencia Arca
+      te buscaria a vos dentre tantos otros cazatesoros del mont\xF3n."
+    - "Helio: Ese \xFAltimo comentario sobra."
+    - "Lovelace: \xBFOtra verdad que quieres evitar? Bueno, respondiendo a tu pregunta,
+      porque sos descendiente de los or\xE1culos de esta antigua civilizaci\xF3n,
+      los \xFAnicos que conservan sus recuerdos tras el reinicio temporal ocasionado
+      por el sistema amanecer."
+  - dialogos:
+    - "Helio: \xBFCual es el \u201Carma\u201D secreta de la logia del Amanecer?"
+    - "Lovelace: La susodicha arma, no es un arma como tal. El nombre que le otorgaron
+      sus creadores, los cient\xEDficos que resid\xEDan en esta base antes del colapso
+      de su civilizaci\xF3n, fue \u201CSistema amanecer\u201D"
+    - "Lovelace: Ten\xEDan la absurda creencia de que si lograban retroceder el tiempo
+      lo suficiente al inicio de cualquier guerra que tuvieran contra otra naci\xF3n,
+      y conservaban los recuerdos de su fracaso, podr\xEDan ganar cualquier guerra
+      y salir victoriosos siempre y recibir el eterno amanecer del ma\xF1ana."
+    - "Lovelace: Aquel que pod\xEDa conservar los recuerdos tras el reinicio se le
+      dio el t\xEDtulo de \u201COr\xE1culo\u201D."
+  - dialogos:
+    - "Helio: \xBFque hace la \u201Cllave \u201C que mencionaste que tiene Aurum?"
+    - "Lovelace: Si bien el Or\xE1culo era aquel que conservaba los recuerdos tras
+      el reinicio, quien deb\xEDa activar el sistema Amanecer era el Rey, due\xF1o
+      de estas ruinas, utilizando una llave que actuaba como seguro, para que nadie
+      m\xE1s que no fuera de la familia real pudiera usar el sistema."
+    - "Lovelace: Obviamente aurum tiene la llave porque, as\xED como vos defendes
+      del Or\xE1culo, \xE9l desciende del Rey, adem\xE1s de ser el l\xEDder de la
+      logia del Amanecer, aunque eso \xFAltimo creo que ya lo sab\xEDas."
+  - dialogos:
+    - "Helio: \xBFQue planea hacer la logia del Amanecer con el \u201Csistema amanecer\u201D?"
+    - "Lovelace: cuando Aurum cre\xF3 la logia del Amanecer, no compart\xEDa los
+      ideales de conquista de sus ancestros, quer\xEDa usar el sistema Amanecer para
+      preservar en la eternidad a todas las civilizaciones que pudieran estar al
+      borde del colapso, para que no se perdiera su conocimiento y cultura en el
+      tiempo."
+    - "Lovelace: Debido a eso y a la creciente amenaza de una organizaci\xF3n que
+      amenaza con destruir cualquier otro grupo, civilizaci\xF3n o simple asentamiento
+      ajeno a ellos."
+    - "Lovelace: Aurum busco desesperadamente estas ruinas para poder activar el
+      sistema amanecer y preservar el mundo tal como se conoc\xEDa en sus \xFAltimos
+      momentos."
+    - "Lovelace: Resumido para que alguien de tu intelecto lo entienda. La logia
+      del Amanecer busca preservar el mundo como se conoce ante la posible destrucci\xF3n
+      de este. "
+    - "Helio: \u2026."
+  - dialogos:
+    - "Helio: \xBFPorque el Arca quiere detener a la logia del Amanecer?"
+    - "Lovelace: En realidad es al rev\xE9s. La logia del Amanecer quiere detener
+      al Arca, utilizando el sistema Amanecer para condenarlos al fracaso perpetuo."
+    - "Lovelace: No obstante, el Arca, conoc\xEDa los ideales de la logia, por lo
+      que para asegurar su triunfo, buscaron y mandaron al \xFAnico individuo que
+      pudiera destruir el sistema Amanecer al conservar sus recuerdos tras el reinicio."
+    - "Y as\xED asegurar el \xE9xito de sus ideales, el exterminio de todo lo ajeno
+      a ellos."
+  - dialogos:
+    - "Helio: \xBFQu\xE9 es esta habitaci\xF3n?"
+    - "Lovelace: Es mi m\xE1s grande invento, la cree cuando encontr\xE9 estas ruinas
+      y entend\xED sus or\xEDgenes, antes de la llegada de la logia."
+    - "Lovelace: Logre usar la tecnolog\xEDa de esta civilizaci\xF3n y mi brillante
+      capacidad de observaci\xF3n para hacer una sala, la cual me atrevo a decir
+      que es inmune a cualquier intervenci\xF3n externa no deseada."
+    - "Debido a que me encuentro en esta habitaci\xF3n no me veo afectada por el
+      reinicio del sistema Amanecer o los planes del Arca."
+  - dialogos:
+    - 'Helio: Ninguna'
+    - "Lovelace: Espero que el conocimiento que te brinde te ayude a tomar la decisi\xF3n
+      que creas correcta. Ahora agradecer\xEDa que me dejaras proseguir con mis investigaciones."
+  pregunta: "Lovelace: \xBFCual es tu pregunta?"
