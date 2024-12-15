@@ -27,27 +27,12 @@ public class PanelCablesTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (playerInZone && Input.GetKeyDown(KeyCode.E)) // Si está en la zona y presiona "E"
+        if (playerInZone && Input.GetKeyDown(KeyCode.F) && !GLOBAL_Dialogos.enDialogo) // Si está en la zona y presiona "E"
         {
             if (panelCables != null)
             {
                 // Alterna el estado del panel
-                bool isActive = panelCables.activeSelf;
-                panelCables.SetActive(!isActive);
-
-                // Ajusta el estado del cursor
-                if (!isActive)
-                {
-                    Cursor.visible = true; // Muestra el cursor
-                    Cursor.lockState = CursorLockMode.None; // Libera el cursor
-                    Debug.Log("Canvas activado.");
-                }
-                else
-                {
-                    Cursor.visible = false; // Oculta el cursor
-                    Cursor.lockState = CursorLockMode.Locked; // Bloquea el cursor
-                    Debug.Log("Canvas desactivado.");
-                }
+                panelCables.SetActive(true);
             }
             else
             {

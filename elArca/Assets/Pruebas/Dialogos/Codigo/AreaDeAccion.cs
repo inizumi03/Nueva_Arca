@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AreaDeAccion : MonoBehaviour
 {
+    public bool desactivarStay;
+
     public int indice;
     public bool guardia;
 
@@ -17,19 +19,31 @@ public class AreaDeAccion : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.F) && !GLOBAL_Dialogos.enDialogo)
+        if (!desactivarStay)
         {
-            if (guardia)
+            if (Input.GetKey(KeyCode.F) && !GLOBAL_Dialogos.enDialogo)
             {
-                if (GLOBAL_Dialogos.trajeObtenido)
-                    GLOBAL_Dialogos.gradoDialogoEspecial = 2;
-                else
-                    GLOBAL_Dialogos.gradoDialogoEspecial = 0;
+                if (guardia)
+                {
+                    if (GLOBAL_Dialogos.trajeObtenido)
+                        GLOBAL_Dialogos.gradoDialogoEspecial = 2;
+                    else
+                        GLOBAL_Dialogos.gradoDialogoEspecial = 0;
 
-                llamar.Invoke();
+                    llamar.Invoke();
+                }
+                else
+                    llamar.Invoke();
             }
-            else
-                llamar.Invoke();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (guardia && !GLOBAL_Dialogos.trajeObtenido)
+        {
+            GLOBAL_Dialogos.gradoDialogoEspecial = 0;
+            llamar.Invoke();
         }
     }
 }

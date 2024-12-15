@@ -21,6 +21,8 @@ public class Gestordedialogo : MonoBehaviour
 
     void Start()
     {
+        GLOBAL_Dialogos.gradoDialogoAda = new int[3];
+        GLOBAL_Dialogos.gradoDialogoDex = new int[3];
         AbrirCerrarTexto();
         Movimiento.LlamarAAda += DialogosDeAda;
         Movimiento.LlamarADex += DialogosDeDex;
@@ -62,6 +64,8 @@ public class Gestordedialogo : MonoBehaviour
     {
         AbrirCerrarTexto();
         GLOBAL_Dialogos.enDialogo = true;
+        print(GLOBAL_Dialogos.sona);
+        print(GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona]);
         texto.text = textoDex[GLOBAL_Dialogos.sona].dialogos[GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona]];
         estado = 0;
     }

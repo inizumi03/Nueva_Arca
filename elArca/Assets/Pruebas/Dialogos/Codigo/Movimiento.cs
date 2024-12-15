@@ -29,12 +29,50 @@ public class Movimiento : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        if (x != 0 && z != 0)
+        {
+            if (x > 0)
+            {
+                if (z > 0)
+                {
+                    z = 1;
+                    x = 0;
+                }
+                else
+                {
+                    x = 1;
+                    z = 0;
+                }
+            }
+            else
+            {
+                if (z > 0)
+                {
+                    x = -1;
+                    z = 0;
+                }
+                else
+                {
+                    z = -1;
+                    x = 0;
+                }
+            }
+        }
+        else if (x != 0)
+        {
+            z = x;
+        }
+        else if (z != 0)
+        {
+            x = -z;
+        }
+
         rb.velocity = new Vector3(x, 0, z) * velocidad;
     }
 
     void Llamar()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && GLOBAL_Dialogos.trajeObtenido)
             LlamarAAda.Invoke();
         else if (Input.GetKeyDown(KeyCode.Q))
             LlamarADex.Invoke();
