@@ -22,6 +22,10 @@ public class Movimiento : MonoBehaviour
             ControlMovimiento();
             Llamar();
         }
+        else
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 
     void ControlMovimiento()

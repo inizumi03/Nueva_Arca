@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 
 public class Pruebas : MonoBehaviour, IPointerClickHandler
 {
+    public GameObject falso;
     public GameObject[] imajenes, posiciones;
     int pocicion, pocicionActual, correcto;
     float tempo;
@@ -101,7 +102,14 @@ public class Pruebas : MonoBehaviour, IPointerClickHandler
 
     void Temporizador()
     {
-        if (tempo < 5) tempo += Time.deltaTime;
-        else gameObject.SetActive(false);
+        if (tempo < 2) tempo += Time.deltaTime;
+        else
+        {
+            falso.gameObject.SetActive(false);
+            GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona]++;
+            GLOBAL_Dialogos.indiseGeneralHistoria++;
+            GLOBAL_Dialogos.puzzleResuelto = true;
+            gameObject.SetActive(false);
+        }
     }
 }

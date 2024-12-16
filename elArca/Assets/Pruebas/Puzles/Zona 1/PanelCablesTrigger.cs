@@ -12,7 +12,6 @@ public class PanelCablesTrigger : MonoBehaviour
         if (other.CompareTag("Player")) // Verifica si el jugador entra
         {
             playerInZone = true;
-            Debug.Log("Jugador entró en la zona.");
         }
     }
 
@@ -21,13 +20,12 @@ public class PanelCablesTrigger : MonoBehaviour
         if (other.CompareTag("Player")) // Verifica si el jugador sale
         {
             playerInZone = false;
-            Debug.Log("Jugador salió de la zona.");
         }
     }
 
     private void Update()
     {
-        if (playerInZone && Input.GetKeyDown(KeyCode.F) && !GLOBAL_Dialogos.enDialogo) // Si está en la zona y presiona "E"
+        if (playerInZone && Input.GetKeyDown(KeyCode.F) && !GLOBAL_Dialogos.enDialogo && !GLOBAL_Dialogos.trajeObtenido) // Si está en la zona y presiona "E"
         {
             if (panelCables != null)
             {

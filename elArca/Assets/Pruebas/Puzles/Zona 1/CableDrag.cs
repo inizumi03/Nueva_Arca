@@ -28,8 +28,10 @@ public class CableDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (isConnected) return; // Evita mover cables conectados
-        rectTransform.anchoredPosition += eventData.delta;
+        if (!isConnected)
+        {
+            rectTransform.anchoredPosition += eventData.delta * 2;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)

@@ -5,26 +5,27 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
     public CableConnection receptorRojo, receptorVerde, receptorAzul; // Referencias a los receptores
-    public GameObject puerta; // Referencia a la puerta
+    public GameObject canvas; // Referencia a la puerta
 
     private bool puertaAbierta = false;
 
     void Update()
     {
         // Si todos los receptores están conectados correctamente
-        if (!puertaAbierta &&
+        if (!GLOBAL_Dialogos.trajeObtenido &&
             receptorRojo.EstaConectado() &&
             receptorVerde.EstaConectado() &&
             receptorAzul.EstaConectado())
         {
-            AbrirPuerta();
+            TerminarPuzzle();
         }
     }
 
-    private void AbrirPuerta()
+    private void TerminarPuzzle()
     {
-        puerta.SetActive(false); // Desactiva la puerta
-        puertaAbierta = true; // Evita abrir la puerta múltiples veces
-        Debug.Log("¡Puzzle completado! La puerta se ha abierto.");
+        canvas.SetActive(false);
+        GLOBAL_Dialogos.trajeObtenido = true;
+        GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona]++;
+        GLOBAL_Dialogos.indiseGeneralHistoria++;
     }
 }

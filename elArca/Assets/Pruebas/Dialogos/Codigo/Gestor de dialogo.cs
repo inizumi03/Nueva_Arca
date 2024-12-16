@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Gestordedialogo : MonoBehaviour
@@ -21,6 +22,7 @@ public class Gestordedialogo : MonoBehaviour
 
     void Start()
     {
+        GLOBAL_Dialogos.puzzleResuelto = false;
         GLOBAL_Dialogos.gradoDialogoAda = new int[3];
         GLOBAL_Dialogos.gradoDialogoDex = new int[3];
         AbrirCerrarTexto();
@@ -31,6 +33,9 @@ public class Gestordedialogo : MonoBehaviour
         GLOBAL_Dialogos.gradoHistoria = 0;
         indiceTemporal = -1;
         GLOBAL_Dialogos.indicePosmortem = 0;
+        GLOBAL_Dialogos.gradoDialogoEspecial = 0;
+        GLOBAL_Dialogos.trajeObtenido = false;
+        GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona] = 0;
         if (GLOBAL_Dialogos.gradoPosmortem != 0)
             ActivarPosmortem();
         else
@@ -64,19 +69,18 @@ public class Gestordedialogo : MonoBehaviour
     {
         AbrirCerrarTexto();
         GLOBAL_Dialogos.enDialogo = true;
-        print(GLOBAL_Dialogos.sona);
-        print(GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona]);
         texto.text = textoDex[GLOBAL_Dialogos.sona].dialogos[GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona]];
         estado = 0;
     }
 
     void DialogoEvento()
     {
+        AbrirCerrarTexto();
+        GLOBAL_Dialogos.enDialogo = true;
+        texto.text = dialogosEspeciales[GLOBAL_Dialogos.sona].dialogos[GLOBAL_Dialogos.gradoDialogoEspecial];
+        estado = 0;
         if (GLOBAL_Dialogos.sona == 0)
         {
-            AbrirCerrarTexto();
-            GLOBAL_Dialogos.enDialogo = true;
-            texto.text = dialogosEspeciales[GLOBAL_Dialogos.sona].dialogos[GLOBAL_Dialogos.gradoDialogoEspecial];
             estado = 2;
         }
     }
@@ -114,6 +118,12 @@ public class Gestordedialogo : MonoBehaviour
         }
         else if (estado == 2)
         {
+            if (GLOBAL_Dialogos.gradoDialogoEspecial == 1 && GLOBAL_Dialogos.sona == 0)
+            {
+                if (GLOBAL_Dialogos.gradoPosmortem == 0) GLOBAL_Dialogos.gradoPosmortem = 1;
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
             AbrirCerrarTexto();
             if (GLOBAL_Dialogos.sona == 0 && GLOBAL_Dialogos.gradoDialogoEspecial == 0)
             {
@@ -149,7 +159,7 @@ public class Gestordedialogo : MonoBehaviour
     void ActivarPosmortem()
     {
         GLOBAL_Dialogos.gradoPosmortem--;
-        GLOBAL_Dialogos.indiseGeneralHistoria = 1;
+        GLOBAL_Dialogos.indiseGeneralHistoria = 0;
         indiceTemporal = GLOBAL_Dialogos.indiseGeneralHistoria;
         AbrirCerrarTexto();
         GLOBAL_Dialogos.enDialogo = true;
@@ -176,5 +186,12 @@ public class Gestordedialogo : MonoBehaviour
 
             opcinesSimples.SetActive(true);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Movimiento.LlamarAAda -= DialogosDeAda;
+        Movimiento.LlamarADex -= DialogosDeDex;
+        AreaDeAccion.llamar -= DialogoEvento;
     }
 }

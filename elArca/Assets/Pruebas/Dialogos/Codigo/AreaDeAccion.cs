@@ -14,7 +14,7 @@ public class AreaDeAccion : MonoBehaviour
 
     private void Start()
     {
-        indice += 2;
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -29,11 +29,13 @@ public class AreaDeAccion : MonoBehaviour
                         GLOBAL_Dialogos.gradoDialogoEspecial = 2;
                     else
                         GLOBAL_Dialogos.gradoDialogoEspecial = 0;
-
-                    llamar.Invoke();
                 }
                 else
-                    llamar.Invoke();
+                {
+                    GLOBAL_Dialogos.gradoDialogoEspecial = indice;
+                }
+
+                llamar.Invoke();
             }
         }
     }
