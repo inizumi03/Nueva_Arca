@@ -76,9 +76,12 @@ public class Movimiento : MonoBehaviour
 
     void Llamar()
     {
-        if (Input.GetKeyDown(KeyCode.E) && GLOBAL_Dialogos.trajeObtenido)
-            LlamarAAda.Invoke();
-        else if (Input.GetKeyDown(KeyCode.Q))
-            LlamarADex.Invoke();
+        if (GLOBAL_Dialogos.sona < 3)
+        {
+            if (Input.GetKeyDown(KeyCode.E) && GLOBAL_Dialogos.trajeObtenido)
+                LlamarAAda.Invoke();
+            else if (Input.GetKeyDown(KeyCode.Q))
+                LlamarADex.Invoke();
+        }
     }
 }

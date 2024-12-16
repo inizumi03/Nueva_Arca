@@ -17,7 +17,6 @@ public class Movimientoespecial : MonoBehaviour
     private void Start()
     {
         enPuzle3 = false;
-        GLOBAL_Dialogos.sona = 3;
     }
 
     void Update()
@@ -31,6 +30,9 @@ public class Movimientoespecial : MonoBehaviour
         {
             jugador.transform.position += Vector3.forward * 5;
             enPuzle3 = false;
+            GLOBAL_Dialogos.indiseGeneralHistoria++;
+            GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona]++;
+            GLOBAL_Dialogos.gradoDialogoAda[GLOBAL_Dialogos.sona]++;
         }
     }
 
@@ -52,7 +54,7 @@ public class Movimientoespecial : MonoBehaviour
 
     public void Eleccion(int indice)
     {
-        if (GLOBAL_Dialogos.sona == 3)
+        if (GLOBAL_Dialogos.sona == 2)
         {
             if (indice == 0)
             {

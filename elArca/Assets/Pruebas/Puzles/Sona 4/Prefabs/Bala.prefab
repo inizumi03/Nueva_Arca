@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4626320535576897317}
   - component: {fileID: 6642552586752746686}
   - component: {fileID: 6160443136730494657}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Bala
   m_TagString: Bala
   m_Icon: {fileID: 0}
@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61564d2dbc33c04aa624ff355c4e3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 20
+  velocidad: 40

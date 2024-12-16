@@ -22,6 +22,7 @@ public class Gestordedialogo : MonoBehaviour
 
     void Start()
     {
+        GLOBAL_Dialogos.sona = 0;
         GLOBAL_Dialogos.puzzleResuelto = false;
         GLOBAL_Dialogos.gradoDialogoAda = new int[3];
         GLOBAL_Dialogos.gradoDialogoDex = new int[3];
@@ -36,6 +37,7 @@ public class Gestordedialogo : MonoBehaviour
         GLOBAL_Dialogos.gradoDialogoEspecial = 0;
         GLOBAL_Dialogos.trajeObtenido = false;
         GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona] = 0;
+        GLOBAL_Dialogos.eleccionCorrecta = false;
         if (GLOBAL_Dialogos.gradoPosmortem != 0)
             ActivarPosmortem();
         else
@@ -110,6 +112,8 @@ public class Gestordedialogo : MonoBehaviour
             }
             else
             {
+                if (GLOBAL_Dialogos.indiseGeneralHistoria == 11) GLOBAL_Dialogos.eleccionCorrecta = true;
+
                 AbrirCerrarTexto();
 
                 if (GLOBAL_Dialogos.indiseGeneralHistoria == 3)
@@ -169,6 +173,9 @@ public class Gestordedialogo : MonoBehaviour
 
     public void OpcionMultipleHistoria(int indice)
     {
+
+        if (GLOBAL_Dialogos.indiseGeneralHistoria == 11 && indice == 2) indice = 0;
+
         GLOBAL_Dialogos.indiseGeneralHistoria += indice;
         AbrirCerrarTexto();
         opcinesSimples.SetActive(false);

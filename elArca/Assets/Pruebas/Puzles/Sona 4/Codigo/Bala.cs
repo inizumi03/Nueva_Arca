@@ -16,6 +16,7 @@ public class Bala : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        print(collision.gameObject.name);
         Destroy(gameObject);
     }
 }

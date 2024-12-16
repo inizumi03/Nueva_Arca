@@ -17,7 +17,7 @@ public class PorEventosTriger : MonoBehaviour
             if (gradoDialogoDex) GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona]++;
             if (gradoDialogoAda) GLOBAL_Dialogos.gradoDialogoAda[GLOBAL_Dialogos.sona]++;
 
-            gameObject.SetActive(false);
+            if (GLOBAL_Dialogos.indiseGeneralHistoria != 9) gameObject.SetActive(false);
         }
     }
 }

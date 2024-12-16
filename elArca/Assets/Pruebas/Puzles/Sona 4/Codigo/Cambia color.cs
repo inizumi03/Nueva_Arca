@@ -10,23 +10,30 @@ public class Cambiacolor : MonoBehaviour
     public GameObject balaPrefab, jugador;
     float temp;
     public float tempMax;
+    public GameObject cañon;
 
     void Start()
     {
         mColor = colores[Random.Range(0, colores.Count)];
 
-        GetComponent<Renderer>().material.color = mColor;
+        cañon.GetComponent<Renderer>().material.color = mColor;
 
         Pilares.BorrarColores += EliminarColor;
     }
 
     void Update()
     {
-        transform.LookAt(jugador.transform.position);
-        Temporizador();
+        if (GLOBAL_Dialogos.sona == 3)
+        {
+            transform.LookAt(new Vector3(jugador.transform.position.x, transform.position.y, jugador.transform.position.z));
+            Temporizador();
 
-        if (transform.position.y < -2)
-            Destroy(gameObject);
+            if (transform.position.y < -2)
+            {
+                GLOBAL_Dialogos.indiseGeneralHistoria++;
+                Destroy(gameObject);
+            }
+        }
     }
 
     void Disparar()
@@ -40,7 +47,7 @@ public class Cambiacolor : MonoBehaviour
         if (colores.Count > 0)
             mColor = colores[Random.Range(0, colores.Count)];
 
-        GetComponent<Renderer>().material.color = mColor;
+        cañon.GetComponent<Renderer>().material.color = mColor;
     }
     void Temporizador()
     {

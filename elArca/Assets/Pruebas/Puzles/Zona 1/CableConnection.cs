@@ -20,7 +20,6 @@ public class CableConnection : MonoBehaviour
                 cable.isConnected = true; // Marca el cable como conectado
                 other.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition; // Fija la posición
                 cableConectado = true;
-                Debug.Log("Cable conectado correctamente: " + cableCorrecto.name);
             }
         }
     }
@@ -35,7 +34,6 @@ public class CableConnection : MonoBehaviour
             {
                 cable.isConnected = false;
                 cableConectado = false;
-                Debug.Log("Cable desconectado: " + cableCorrecto.name);
             }
         }
     }
