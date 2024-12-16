@@ -38,6 +38,7 @@ public class Gestordedialogo : MonoBehaviour
         GLOBAL_Dialogos.trajeObtenido = false;
         GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona] = 0;
         GLOBAL_Dialogos.eleccionCorrecta = false;
+        GLOBAL_Dialogos.empezarAsalto = false;
         if (GLOBAL_Dialogos.gradoPosmortem != 0)
             ActivarPosmortem();
         else
@@ -115,6 +116,15 @@ public class Gestordedialogo : MonoBehaviour
                 if (GLOBAL_Dialogos.indiseGeneralHistoria == 11) GLOBAL_Dialogos.eleccionCorrecta = true;
 
                 AbrirCerrarTexto();
+
+                if ((GLOBAL_Dialogos.indiseGeneralHistoria == 14 && Colicion.equibocado) || GLOBAL_Dialogos.indiseGeneralHistoria == 10)
+                {
+                    if (GLOBAL_Dialogos.gradoPosmortem == 0) GLOBAL_Dialogos.gradoPosmortem = 1;
+
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
+
+                if (GLOBAL_Dialogos.indiseGeneralHistoria == 17 || GLOBAL_Dialogos.indiseGeneralHistoria == 19) GLOBAL_Dialogos.empezarAsalto = true;
 
                 if (GLOBAL_Dialogos.indiseGeneralHistoria == 3)
                     GLOBAL_Dialogos.indiseGeneralHistoria++;

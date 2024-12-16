@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GestordedialogosCientifica : MonoBehaviour
 {
-    public GameObject canvas, opcines;
+    public GameObject canvas, opcines, imajenFondo;
     public TextMeshProUGUI texto;
     int dialogo, gradoTemporal;
 
@@ -36,6 +36,7 @@ public class GestordedialogosCientifica : MonoBehaviour
             gradoTemporal = GLOBAL_Dialogos.gradoCientifica;
             GLOBAL_Dialogos.enDialogo = true;
             canvas.SetActive(true);
+            imajenFondo.SetActive(true);
             SiguienteTexto();
         }
     }
@@ -49,6 +50,7 @@ public class GestordedialogosCientifica : MonoBehaviour
         }
         else if (GLOBAL_Dialogos.gradoCientifica == 7)
         {
+            imajenFondo.SetActive(false);
             canvas.SetActive(false);
             GLOBAL_Dialogos.dialogosCientifica = false;
             GLOBAL_Dialogos.enDialogo = false;

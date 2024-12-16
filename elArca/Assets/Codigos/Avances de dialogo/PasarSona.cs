@@ -23,7 +23,7 @@ public class PasarSona : MonoBehaviour
                 GLOBAL_Dialogos.gradoDialogoDex[GLOBAL_Dialogos.sona]++;
                 GLOBAL_Dialogos.gradoDialogoAda[GLOBAL_Dialogos.sona]++;
             }
-            else
+            else if (GLOBAL_Dialogos.sona == 2)
             {
                 jugador.transform.position = pocicionesJugador.transform.position;
                 camara.transform.position = pocicionesCamara.transform.position;

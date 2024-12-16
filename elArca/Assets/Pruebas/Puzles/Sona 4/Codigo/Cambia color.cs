@@ -23,7 +23,7 @@ public class Cambiacolor : MonoBehaviour
 
     void Update()
     {
-        if (GLOBAL_Dialogos.sona == 3)
+        if (GLOBAL_Dialogos.sona == 3 && GLOBAL_Dialogos.empezarAsalto)
         {
             transform.LookAt(new Vector3(jugador.transform.position.x, transform.position.y, jugador.transform.position.z));
             Temporizador();

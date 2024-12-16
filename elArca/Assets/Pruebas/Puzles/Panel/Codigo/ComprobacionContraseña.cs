@@ -9,7 +9,8 @@ public class ComprobacionContraseña : MonoBehaviour
     public int[] respuestas;
     int[] valores;
     int indice;
-    bool completo;
+    static public bool completo;
+
     void Start()
     {
         ComprobacionDeClock.Cargar += Comprobar;
@@ -40,7 +41,8 @@ public class ComprobacionContraseña : MonoBehaviour
         if (valores[0] == respuestas[0] && valores[1] == respuestas[1] && valores[2] == respuestas[2])
         {
             completo = true;
-            print("Fin");
+            GLOBAL_Dialogos.dialogosCientifica = true;
+            gameObject.SetActive(false);
         }
         else Reiniciar();
     }

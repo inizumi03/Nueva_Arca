@@ -21,7 +21,7 @@ public class Movimientoespecial : MonoBehaviour
 
     void Update()
     {
-        if (enPuzle3 && !Colicion.equibocado)
+        if (enPuzle3 && !Colicion.equibocado && !GLOBAL_Dialogos.enDialogo)
         {
             Movimiento();
         }
